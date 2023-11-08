@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background-color: $secondary-background-color;
+  padding: 10px;
+  width: 100%;
+}
+
+.header-gitHub-icon {
+  width: 50px;
+  height: auto;
+}
+
+.header-title {
+  font-size: 26px;
+  color: $secondary-font-color;
+  font-weight: 700;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $secondary-background-color;
+  min-height: 40px;
+  width: 100%;
+  font-style: italic;
+}
