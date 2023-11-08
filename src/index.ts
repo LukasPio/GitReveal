@@ -108,5 +108,12 @@ async function renderUser(user: {
 }
 
 const searchButton = document.querySelector("button");
+const inputName = document.querySelector("#search-user");
 
 searchButton.addEventListener("click", getUser);
+inputName.addEventListener("keydown", (e) => {
+  // @ts-ignore
+  if (e.key === "Enter" || e.key === 13) {
+    getUser();
+  }
+});
