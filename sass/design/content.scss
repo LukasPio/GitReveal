@@ -46,14 +46,19 @@
   flex-direction: column;
   align-items: center;
   background-color: $secondary-background-color;
-  min-height: 260px;
+  min-height: 280px;
   width: 270px;
   border-radius: 6px;
+  color: $primary-font-color;
 }
 
 .user-details {
   display: flex;
   flex-direction: column;
+  text-align: center;
+}
+
+.user-repositories {
   text-align: center;
 }
 

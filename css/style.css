@@ -78,14 +78,19 @@
   flex-direction: column;
   align-items: center;
   background-color: #313131;
-  min-height: 260px;
+  min-height: 280px;
   width: 270px;
   border-radius: 6px;
+  color: white;
 }
 
 .user-details {
   display: flex;
   flex-direction: column;
+  text-align: center;
+}
+
+.user-repositories {
   text-align: center;
 }
 
@@ -125,6 +130,19 @@
   height: 100vh;
   background-color: #2b2b2b;
   min-height: 590px;
+}
+
+@media (max-width: 350px) {
+  #search-user {
+    width: 140px;
+    font-size: 13px;
+  }
+  .input-container:hover {
+    transform: scale(1.1);
+  }
+  .user-card {
+    width: 250px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

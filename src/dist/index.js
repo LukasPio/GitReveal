@@ -3,6 +3,10 @@ async function getUser() {
     const userName = document.getElementById("search-user").value;
     const response = await fetch(`https://api.github.com/users/${userName}`);
     const user = await response.json();
+    if (user.message === "Not Found") {
+        alert("Esse usuário não existe");
+        throw new Error("This user don't exist");
+    }
     const requiredData = {
         name: user.name,
         avatar: user.avatar_url,

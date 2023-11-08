@@ -20,3 +20,18 @@
   background-color: $primary-background-color;
   min-height: 590px;
 }
+
+@media (max-width: 350px) {
+  #search-user {
+    width: 140px;
+    font-size: 13px;
+  }
+  .input-container {
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  .user-card {
+    width: 250px;
+  }
+}
