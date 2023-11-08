@@ -100,8 +100,9 @@
 }
 
 .user-icon {
-  width: 50px;
+  width: 70px;
   height: auto;
+  border-radius: 6px;
 }
 
 .user-name {
