@@ -107,13 +107,52 @@ async function renderUser(user: {
   card_area.appendChild(userCardSection);
 }
 
-const searchButton = document.querySelector("button");
-const inputName = document.querySelector("#search-user");
+function togleDarkLigthMode() {
+  const header = document.querySelector(".header");
+  const footer = document.querySelector(".footer");
+  const content = document.querySelector(".container");
 
+  if (togleButton.textContent === "Modo Claro") {
+    togleButton.textContent = "Modo Escuro";
+    // @ts-ignore
+    header.style.backgroundColor = "#f5f5f5";
+    // @ts-ignore
+    footer.style.backgroundColor = "#f5f5f5";
+    // @ts-ignore
+    content.style.backgroundColor = "#fff";
+    localStorage.setItem("mode", "light-mode");
+  } else {
+    togleButton.textContent = "Modo Claro";
+    // @ts-ignore
+    header.style.backgroundColor = "#313131";
+    // @ts-ignore
+    footer.style.backgroundColor = "#313131";
+    // @ts-ignore
+    content.style.backgroundColor = "#2b2b2b";
+    localStorage.setItem("mode", "dark-mode");
+  }
+}
+
+const searchButton = document.querySelector(".send-button");
+const inputName = document.querySelector("#search-user");
+const togleButton = document.querySelector(".header > button");
+
+togleButton.addEventListener("click", togleDarkLigthMode);
 searchButton.addEventListener("click", getUser);
 inputName.addEventListener("keydown", (e) => {
   // @ts-ignore
   if (e.key === "Enter" || e.key === 13) {
     getUser();
   }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const actualMode = localStorage.getItem("mode");
+  if (actualMode === "light-mode") {
+    togleButton.textContent = "Modo Claro";
+  } else {
+    togleButton.textContent = "Modo Escuro";
+  }
+
+  togleDarkLigthMode();
 });

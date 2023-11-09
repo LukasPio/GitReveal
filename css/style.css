@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;1,300&display=swap");
 .header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 5px;
   background-color: #313131;
@@ -12,6 +12,11 @@
 .header-gitHub-icon {
   width: 50px;
   height: auto;
+}
+
+.header-center {
+  display: flex;
+  align-items: center;
 }
 
 .header-title {
@@ -30,6 +35,17 @@
   font-style: italic;
 }
 
+.header > button, .header > span {
+  width: 70px;
+}
+
+.header > button {
+  background-color: transparent;
+  border: solid 2px #1e1e40;
+  color: black;
+  border-radius: 10px;
+}
+
 .content {
   display: flex;
   flex-direction: column;
@@ -44,7 +60,7 @@
   width: 230px;
   text-align: center;
   border-radius: 6px;
-  border: none;
+  border: solid black 2px;
   transition: 0.8s;
 }
 #search-user:focus {
@@ -54,6 +70,7 @@
 .input-container {
   display: flex;
   transition: 0.6s;
+  color: black;
 }
 .input-container:hover {
   transform: scale(1.2);
@@ -68,7 +85,7 @@
   width: 50px;
   font-size: 14px;
   background-color: white;
-  border: 1px solid #ccc;
+  border: solid black 2px;
   border-radius: 0 9px 9px 0;
   cursor: pointer;
 }
@@ -82,6 +99,7 @@
   width: 270px;
   border-radius: 6px;
   color: white;
+  padding: 15px;
 }
 
 .user-details {
@@ -120,6 +138,7 @@
   text-decoration: none;
   box-sizing: border-box;
   font-family: Roboto;
+  transition: 0.6s;
 }
 
 .container {
@@ -132,6 +151,15 @@
   min-height: 590px;
 }
 
+@media (max-width: 500px) {
+  header {
+    justify-content: space-between;
+  }
+  .header > span {
+    width: 0;
+    display: none;
+  }
+}
 @media (max-width: 350px) {
   #search-user {
     width: 140px;
@@ -142,6 +170,14 @@
   }
   .user-card {
     width: 250px;
+  }
+}
+@media (max-width: 300px) {
+  .header-title {
+    font-size: 17px;
+  }
+  .header-gitHub-icon {
+    width: 40px;
   }
 }
 

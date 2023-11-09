@@ -1,9 +1,9 @@
 .header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 5px;
-  background-color: $secondary-background-color;
+  background-color: $dark-secondary-background-color;
   padding: 10px;
   width: 100%;
 }
@@ -13,9 +13,14 @@
   height: auto;
 }
 
+.header-center {
+  display: flex;
+  align-items: center;
+}
+
 .header-title {
   font-size: 26px;
-  color: $secondary-font-color;
+  color: $dark-secondary-font-color;
   font-weight: 700;
 }
 
@@ -23,8 +28,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: $secondary-background-color;
+  background-color: $dark-secondary-background-color;
   min-height: 40px;
   width: 100%;
   font-style: italic;
+}
+
+.header > button, .header > span {
+  width: 70px;
+}
+
+.header > button {
+  background-color: transparent;
+  border: solid 2px #1e1e40;
+  color: $dark-secondary-font-color;
+  border-radius: 10px;
 }

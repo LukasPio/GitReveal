@@ -11,12 +11,16 @@
   <body>
     <div class="container">
       <header class="header">
-        <img
-          src="./images/gitHub-icon.png"
-          alt="github-icon"
-          class="header-gitHub-icon"
-        />
-        <p class="header-title">GitReveal</p>
+        <span></span>
+        <section class="header-center">
+          <img
+                  src="./images/gitHub-icon.png"
+                  alt="github-icon"
+                  class="header-gitHub-icon"
+          />
+          <p class="header-title">GitReveal</p>
+        </section>
+        <button id="toggle-mode-button">Modo Claro</button>
       </header>
       <div class="content">
         <span class="input-container">
@@ -26,7 +30,7 @@
             id="search-user"
             placeholder="Insert a user name"
           />
-          <button>Send</button>
+          <button class="send-button">Send</button>
         </span>
         <div class="card-area"></div>
       </div>

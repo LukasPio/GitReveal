@@ -9,6 +9,7 @@
   text-decoration: none;
   box-sizing: border-box;
   font-family: Roboto;
+  transition: 0.6s;
 }
 
 .container {
@@ -17,8 +18,18 @@
   justify-content: space-between;
   align-items: center;
   height: 100vh;
-  background-color: $primary-background-color;
+  background-color: $dark-primary-background-color;
   min-height: 590px;
+}
+
+@media (max-width: 500px) {
+  header {
+    justify-content: space-between;
+  }
+  .header > span {
+    width: 0;
+    display: none;
+  }
 }
 
 @media (max-width: 350px) {
@@ -33,5 +44,14 @@
   }
   .user-card {
     width: 250px;
+  }
+}
+
+@media (max-width: 300px) {
+  .header-title {
+    font-size: 17px;
+  }
+  .header-gitHub-icon {
+    width: 40px;
   }
 }

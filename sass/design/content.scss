@@ -12,7 +12,7 @@
   width: 230px;
   text-align: center;
   border-radius: 6px;
-  border: none;
+  border: solid black 2px;
   transition: 0.8s;
   &:focus {
     outline: none;
@@ -25,6 +25,7 @@
   &:hover {
     transform: scale(1.2);
   }
+  color: black;
 }
 
 .input-container input {
@@ -36,7 +37,7 @@
   width: 50px;
   font-size: 14px;
   background-color: white;
-  border: 1px solid #ccc;
+  border: solid black 2px;
   border-radius: 0 9px 9px 0;
   cursor: pointer;
 }
@@ -45,11 +46,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: $secondary-background-color;
+  background-color: $dark-secondary-background-color;
   min-height: 280px;
   width: 270px;
   border-radius: 6px;
-  color: $primary-font-color;
+  color: $dark-primary-font-color;
+  padding: 15px;
 }
 
 .user-details {
